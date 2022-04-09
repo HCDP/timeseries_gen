@@ -68,7 +68,6 @@ for date in dates:
             index_data = {}
             data[index] = index_data
         index_data[date] = raster.data[index]
-    break
 handler = V2Handler(tapis_config)
 
 key_fields = ["datatype", part_label, "period", "year"]
@@ -89,4 +88,3 @@ for index in data:
     doc["value"][part_label] = part
 
     handler.create_check_duplicates(doc, key_fields, replace = True)
-    break
